@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastelería Artesanal - Productos</title>
+  <link rel="stylesheet" href="Final.css">
+</head>
+<body>
+
+<header class="Header">
+  <!-- Barra de búsqueda -->
+  <div class="Busqueda">
+    <form action="" method="GET">
+      <input type="text" placeholder="Buscar..." name="search">
+      <button type="submit"><img src="./lupa.png" alt="Buscar"></button>
+    </form>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-Contenido">
+    <img src="./logos/Logo3.33.png" alt="Logo Pastelería" class="logo">
+  </div>
+
+  <!-- Cuentas y Carrito -->
+  <div class="Cuentas">
+    <a href="Crear-Cuenta.html" class="button">Crear Cuenta</a> |
+    <a href="Inicio-Sesion.html" class="button">Iniciar Sesión</a>
+    <a href="#" class="carrito-contenedor" id="btn-abrir-carrito">
+      <img src="./carrito-de-compras.png" alt="Carrito de Compras" class="Carrito">
+    </a>
+  </div>
+</header>
+
+<!-- Navegación -->
+<nav class="nav"> 
+  <hr class="linea-negra">
+  <a href="index.html">Inicio</a>              
+  <a href="Nosotras.html">Nosotras</a>
+  <a href="Producto.html" class="activo">Productos</a>
+  <a href="Contacto.html">Contacto</a>
+  <hr class="linea-negra">
+</nav>
+
+<!-- Título de sección -->
+<div class="Titulo">
+  <h1>Nuestros Productos</h1>
+  <p>Descubrí nuestras delicias artesanales hechas con amor.</p>
+</div>
+
+<!-- Galería dinámica (se llena con JS) -->
+<div class="galeria" id="galeria-productos"></div>
+
+<!-- Sección de información -->
+<section class="info">
+  <div class="item">
+    <i class="icono">🚚</i>
+    <h3>Envíos a Monteros</h3>
+    <p>Hacé tu pedido y te lo entregamos en 24HS</p>
+  </div>
+  <div class="item">
+    <i class="icono">💳</i>
+    <h3>Pagá como quieras</h3>
+    <p>Tarjetas de crédito o Mercado Pago</p>
+  </div>
+  <div class="item">
+    <i class="icono">🔒</i>
+    <h3>Comprá con seguridad</h3>
+    <p>Tus datos siempre protegidos</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer"> 
+  <p>© 2025 Dulzura en cada Bocado.</p> 
+</footer>
+
+
+<!-- COMPONENTES DEL CARRITO -->
+
+<!-- Overlay oscuro -->
+<div id="carrito-overlay" class="overlay"></div>
+
+<!-- Modal Carrito -->
+<aside id="carrito-container" class="modal-carrito">
+  <header class="modal-header">
+    <h2 id="carrito-titulo">Tu Carrito</h2>
+    <button id="carrito-cerrar" type="button" aria-label="Cerrar carrito">&times;</button>
+  </header>
+  
+  <ul id="carrito-lista"></ul>
+  
+  <div id="carrito-resumen">
+    <p>Subtotal: <span id="carrito-subtotal">$0</span></p>
+    <p>IVA (21%): <span id="carrito-iva">$0</span></p>
+    <p><strong>Total: <span id="carrito-total">$0</span></strong></p>
+  </div>
+  
+  <nav class="botones-carrito">
+    <button id="iniciar-compra" class="boton-iniciar" type="button">Iniciar compra</button>
+    <button id="vaciar-carrito" class="boton-secundario" type="button">Vaciar carrito</button>
+    <button id="volver-productos" class="volver-productos" type="button">← Seguir comprando</button>
+  </nav>
+</aside>
+
+<!-- Notificación flotante -->
+<div id="notificacion-producto" class="ventana-flotante">
+  <img id="noti-img" src="" alt="Producto agregado" />
+  <div class="noti-contenido">
+    <p id="noti-nombre"></p>
+    <p id="noti-cantidad"></p>
+    <p id="noti-precio"></p>
+    <div class="noti-botones">
+      <button id="noti-ver-carrito" type="button">Ver carrito</button>
+      <button id="noti-cerrar" type="button" aria-label="Cerrar notificación">&#10006;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Pantalla de Compra -->
+<aside id="pantalla-compra" class="modal-carrito">
+  <header class="modal-header">
+    <h2 id="compra-titulo">Finalizar Compra</h2>
+    <button id="cerrar-compra" type="button" aria-label="Cerrar">&times;</button>
+  </header>
+  
+  <form id="form-compra">
+    <label for="titular">Nombre del titular:</label>
+    <input id="titular" name="titular" type="text" placeholder="Ej: María López" required>
+    
+    <label for="numero-tarjeta">Número de tarjeta:</label>
+    <input id="numero-tarjeta" name="numero-tarjeta" type="text" maxlength="16" placeholder="1234 5678 9012 3456" required>
+    
+    <label for="vencimiento">Vencimiento:</label>
+    <input id="vencimiento" name="vencimiento" type="month" required>
+    
+    <label for="cvv">CVV:</label>
+    <input id="cvv" name="cvv" type="password" maxlength="4" placeholder="***" required>
+    
+    <label for="direccion">Dirección de entrega:</label>
+    <input id="direccion" name="direccion" type="text" placeholder="Calle, número, localidad" required>
+    
+    <label for="telefono">Teléfono de contacto:</label>
+    <input id="telefono" name="telefono" type="tel" placeholder="+54 9 ..." required>
+    
+    <button type="submit">Confirmar compra</button>
+  </form>
+</aside>
+
+<!-- Script del carrito -->
+<script src="carrito.js"></script>
+</body>
+</html>

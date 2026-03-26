@@ -1,0 +1,867 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    background-color: white;
+    color: #333;
+    text-align: center; 
+    overflow-x: hidden;
+}
+
+/* Header Todo el contenido Busqueda-Seccion,Logo y Menu */
+.Header {
+    display: flex;
+    justify-content: space-between; /* Para distribuir el espacio entre los elementos */
+    align-items: center; /* Para alinear verticalmente los elementos */
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+   
+}
+
+/*Barra de búsqueda */
+.Busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Esto asegura que ocupe más espacio si es necesario */
+    margin-right: 100px;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 150px;
+    transition: all 0.3s ease;
+
+}
+
+/* Cambio en el borde cuando el campo de búsqueda está activo */
+input[type="text"]:focus {
+    border-color: #ff8080;
+}
+
+/* Botón de búsqueda */
+button {
+    padding: 10px ;
+    background-color: #ff8080;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button img{
+
+    height: 16px;
+}
+
+button:hover {
+    background-color: #ff5757;
+}
+
+            /* Logo */
+.logo-Contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.logo {
+    width: 350px;
+    height: auto;
+}
+
+       /* Inicio de secion/Crear cuenta*/
+.Cuentas{
+      padding: 50px;
+      font-size: 16px;
+      font-family: Courier New, monospace;
+   
+   
+}
+.Cuentas a {
+    text-decoration: none;
+    color: #333; /* Color de los enlaces */
+}
+
+.Cuentas a:hover {
+    color: #ff6666; /* Cambia el color al pasar el mouse */
+}
+
+    /* Carrito de compras */
+
+.Carrito{
+    width: 22px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.Carrito:hover {
+    transform: scale(1.2); /* Aumenta la imagen un 20% al pasar el mouse */
+}
+
+          /* Menuuuu */
+
+.nav{ 
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box; 
+    margin-left: 200px;
+}
+
+
+.nav a {
+    margin: 0 10px; 
+    padding: 10px;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: Courier New, monospace;   
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: #e07a5f; 
+}
+
+/* Linea negra en el menu*/
+
+.linea-negra {
+    border: none;
+    height: 1px; /* Grosor de la línea */
+    background-color: rgb(161, 161, 161); /* Color de la línea */
+    width: 14%; /* Abarca todo el ancho de la pantalla */
+    margin: 10px ; /* Espaciado opcional arriba y abajo */
+    margin-left: 20px;
+}
+
+
+/* Titulo: Tortas por encargo*/
+.Titulo {
+    text-align: center;
+    padding: 25px;
+    background-color: #e07a5f;
+}
+
+.Titulo h1 {
+    font-size: 36px;
+    color: white;
+}
+
+.Titulo p {
+    font-size: 18px;
+    color: #e6e1e1;
+}
+
+
+/* Galeria de fotos */
+
+.Galeria { /* Ajusta todo*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.Producto{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Producto img {
+    width: 100%;
+    height: 250px; /* Ajusta esta altura según tu preferencia */
+    object-fit: cover; /* Hace que la imagen mantenga proporciones y se recorte si es necesario */
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Tiempo */
+}
+.Producto img:hover{
+    transform: scale(1.1);
+    /* y la escala como se agranda */
+}
+
+
+.Producto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.Producto p {
+    font-size: 16px;
+    color: #e07a5f;
+    font-weight: bold;
+}
+
+.Producto button {
+    background-color: #e07a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.Producto button:hover {
+    background-color: #333;
+}
+
+
+/* Sección de Información de Servicios */
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #fdfdfd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.item {
+    text-align: center;
+}
+
+.icono {
+    font-size: 2rem;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+
+ /* Crear Cuenta/Inicio seccion: Formulario */
+
+.Formulario{ 
+        max-width: 600px;
+        margin: 40px auto; 
+        padding: 50px;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+        border-radius: 10px;
+
+    }
+    
+.Grupo {
+        display: flex;
+        flex-direction: column; /* Alinear elementos en columna */
+
+    }
+    
+.Grupo label {
+        font-size: 18px; 
+        color: #333; 
+        margin-bottom: 5px; 
+        text-align: left;
+        padding: 10px;
+        font-family: Lucidatypewriter, monospace;
+    }
+    
+.Grupo input {
+        width: 140%; /* Ajustar el ancho al 100% */
+        padding: 12px; 
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+        outline: none;
+        transition: border 0.3s; 
+    }
+    
+.Grupo input:focus {
+        border: 1px solid #ff5757;
+    }
+    
+.Grupo input::placeholder {
+        color: #aaa;
+    }
+    
+.Contraseña {
+        position: absolute;
+        right: 15px; 
+        top: 42px;
+        cursor: pointer;
+    }
+
+     /* Boton Crear cuenta */
+     
+.Boton {
+        width: 100%;
+        padding: 12px;
+        background-color:  #e07a5f ;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; 
+        display: flex;
+        justify-content: center;
+    }
+
+.Contenido_Boton{
+    margin-left: 170px;
+    padding: 20px;
+    
+}
+
+.Boton:hover {
+        background-color: #ff8080; 
+    }
+    
+     /* Texto_ ¿Ya tenés una cuenta?*/
+.texto-inicio-sesion {
+        margin-top: 15px; 
+        font-size: 14px; 
+        color: #333;
+        text-align: center; 
+    }
+    
+.texto-inicio-sesion a {
+        color: #e07a5f; 
+        text-decoration: none; 
+    }
+    
+.texto-inicio-sesion a:hover {
+        text-decoration: underline; 
+    
+}
+    
+    
+    /* olvide contraseña*/
+.Olvide_Contraseña{
+        margin-top: 15px; 
+        font-size: 14px; 
+        color: #333;
+
+    }
+    
+.Olvide_Contraseña a {
+        color: #e07a5f; 
+        text-decoration: none; 
+        margin-right: 250px;
+   
+    }
+    
+.Olvide_Contraseña a:hover {
+        text-decoration: underline; 
+    
+}
+     
+    
+    /* Footer */
+
+.footer {
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 20px 0; 
+    background-color:  #e07a5f;
+}
+.footer p{
+    color: white;
+    font-size: 14px;
+}
+
+ 
+    /* Descripcion texto nosotras */
+.Texto-Nosotras {
+    padding: 20px;
+   border: 6px double #e07a5f;
+}
+
+.h2 {
+    margin: auto;
+}
+
+.Texto-Nosotras h2 {
+    color:#333;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.Texto-Nosotras p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+     /* Contactos/ Redes sociales */
+
+
+.Contactos{
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#box-Cont{
+    width: 32%;
+    margin: 5px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+  }
+  
+  #box-Cont dd{
+    text-align: center; 
+    
+  }
+  
+  #box-Cont dd h3{
+    width: 90%;
+    background-color: #e07a5f;
+    font-weight: bold;
+    font: 25px Arial, sans-serif;
+    padding: 2px;
+    color: white;
+  
+  }
+  #box-Cont dd h4{
+    margin-top: 5px;
+    margin-left: -50px;
+    font: 18px  sans-serif;
+  
+  }
+  
+  #box-Cont h4:hover {
+    transform: scale(1.2); /* Aumenta el tamaño en un 20% */
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente en un 20% */ 
+  }
+  .Iconos dd img{
+    margin-right: 300px;
+  }
+  
+  .Iconos a dd{
+    margin: 10px;
+
+    padding: 5px;
+  }
+
+  .Iconos a dd :hover{
+    transform: scale(1.5);  
+    
+  } 
+
+/* Estilos para pantallas pequeñas (móviles) TODO */
+@media (max-width: 768px) {
+    .Header, .nav, .Busqueda, .logo-Contenido, .Cuentas {
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center;
+        margin: 0; /* Elimina márgenes excesivos */
+    }
+
+    .logo {
+        width: 250px; /* Ajusta el tamaño del logo */
+    }
+
+    .Busqueda {
+        margin-right: 0;
+    }
+
+    input[type="text"] {
+        width: 100%; /* Aumenta el ancho del campo de búsqueda */
+    }
+
+    .nav a {
+        font-size: 16px; /* Reduce el tamaño de la fuente del menú */
+        padding: 5px;
+    }
+
+    .linea-negra {
+        width: 80%; /* Ajusta el tamaño de la línea */
+    }
+
+    .info {
+        flex-direction: column; /* Alinea la sección de información en columna */
+    }
+
+    .item {
+        margin-bottom: 20px; /* Añade espacio entre los items */
+    }
+
+    .Formulario input, .Formulario button {
+        width: 100%; /* Asegura que los inputs y botones ocupen todo el ancho */
+    }
+}
+
+/* Modiicar la galeria de imagenes RESPONSIVA */
+
+@media (max-width: 1024px) {
+    .Galeria {
+        grid-template-columns: repeat(2, 1fr); 
+        /* Dos columnas para pantallas medianas */
+    }
+}
+
+@media (max-width: 767px) {
+    .Galeria {
+        grid-template-columns: 1fr; 
+        /* Una columna para pantallas pequeñas */
+    }
+}
+
+/* Parte de Contacto/ Redes Sociales */
+@media (max-width: 768px) {
+    .Contactos, box-cont, .Iconos{
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center;
+        margin: 0; /* Elimina márgenes excesivos */
+    }
+
+#box-Cont{
+    width: 80%;
+}
+
+#face{
+    margin-top: -65px;
+    margin-left: 150px;
+}
+}
+
+
+
+/* CARRITO*/
+
+/* Overlay oscuro detrás del carrito */
+#carrito-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+
+/* Panel del carrito (derecha) */
+.modal-carrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  max-width: 90%;
+  height: 100%;
+  background: white;
+  padding: 30px 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;           /* lo muestra/oculta el JS */
+  flex-direction: column;
+  box-shadow: -2px 0 15px rgba(0,0,0,0.2);
+  border-left: 3px solid #e07a5f;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Encabezado del carrito */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e07a5f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  color: #e07a5f;
+  margin: 0;
+}
+
+#carrito-cerrar,
+#cerrar-compra {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Lista de productos dentro del carrito */
+#carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#carrito-lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+#carrito-lista img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.info-producto {
+  flex-grow: 1;
+}
+
+.info-producto h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.info-producto p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+input.cantidad {
+  width: 56px;
+  padding: 6px 4px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button.eliminar {
+  background: #ff5757;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Resumen (subtotal, IVA y total) */
+#carrito-resumen {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+#carrito-resumen p {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Botonera del carrito */
+.botones-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Uso los IDs que ya tenés en el HTML/JS */
+#iniciar-compra {
+  background-color: #e07a5f;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 80%;
+  max-width: 300px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+#iniciar-compra:hover {
+  background-color: #d4504d;
+}
+
+#vaciar-carrito {
+  background-color: transparent;
+  border: 2px solid #e07a5f;
+  color: #e07a5f;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#vaciar-carrito:hover {
+  background-color: #e07a5f;
+  color: white;
+}
+
+#volver-productos {
+  color: #888;
+  font-size: 13px;
+  text-decoration: underline;
+  margin-top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#volver-productos:hover {
+  color: #555;
+}
+
+/* Notificación cuando se agrega un producto */
+.ventana-flotante {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  border: 2px solid #e07a5f;
+  padding: 10px 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  display: none;           /* la muestra el JS */
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  max-width: 320px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.ventana-flotante img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ventana-flotante button {
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ventana-flotante button:hover {
+  background-color: #d4504d;
+}
+
+/* Modal de forma de pago */
+/*#pantalla-compra {
+  /* puede reutilizar .modal-carrito para el panel; si lo querés centrado, descomentar: */
+  /* position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(560px, 92%);
+  height: auto; */
+/*}*/
+
+#pantalla-compra form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#pantalla-compra input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#pantalla-compra form button {
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#pantalla-compra form button:hover {
+  background-color: #d4504d;
+}
+
+/* Responsive del carrito */
+@media (max-width: 768px) {
+  .modal-carrito {
+    width: 100%;
+  }
+}
+
+/* === FIX CARRITO ICONO === 
+.carrito img, 
+.carrito svg {
+  width: 35px;   /* tamaño fijo 
+  height: 35px;
+  cursor: pointer;
+}*/
+
+/* === FIX GALERIA DE PRODUCTOS === */
+.galeria {
+  display: grid;
+   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria .producto {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.galeria .producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES DE PRODUCTOS  */
+.galeria .producto img {
+  width: 100%;
+  height: 200px;          
+  object-fit: cover;     
+  border-radius: 8px;
+}
